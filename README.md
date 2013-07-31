@@ -1,4 +1,3 @@
 projects
 ========
-
-Pet Projects
+This project implements creating and dispatching threads into a threadpool. 
