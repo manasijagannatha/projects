@@ -57,7 +57,7 @@ threadpool create_threadpool(int num_threads_in_pool) {
     return NULL;
   }
   pool->tid = (pthread_t*)malloc((sizeof(pthread_t)*num_threads_in_pool));
-  // add your code here to initialize the newly created threadpool
+ 
   pool->count = num_threads_in_pool;
   pool->activeThreadCnt = num_threads_in_pool;
 
@@ -94,7 +94,7 @@ void dispatch(threadpool from_me, dispatch_fn dispatch_to_here,
   pthread_mutex_lock(&pool->mutextask);
   my_queue = pool->jobs;
 
-  // add your code here to dispatch a thread
+ 
 	if(!my_queue)
 	{
 		my_queue = (queue *)malloc(sizeof(queue));
@@ -132,7 +132,7 @@ void dispatch(threadpool from_me, dispatch_fn dispatch_to_here,
 void destroy_threadpool(threadpool destroyme) {
   _threadpool *pool = (_threadpool *) destroyme;
 
-  // add your code here to kill a threadpool
+
 	
 
 }
